@@ -4,7 +4,7 @@
 
 int _tmain(int argc, _TCHAR* argv[]) {
 	HANDLE h = CreateFile(
-		L"\\\\.\\mailslot\MyMailBox",
+		L"\\\\.\\mailslot\\MyMailBox",
 		GENERIC_WRITE,
 		FILE_SHARE_READ,
 		nullptr,
@@ -14,6 +14,10 @@ int _tmain(int argc, _TCHAR* argv[]) {
 
 	if (h == INVALID_HANDLE_VALUE) {
 		printf("Error: %d\n", GetLastError());
+		printf("Press any key to continue.. ");
+
+
+		getchar();
 		return 1;
 	}
 

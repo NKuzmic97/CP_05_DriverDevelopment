@@ -48,7 +48,7 @@ void WINAPI MyServiceMain(DWORD count, LPSTR* args) {
 	SetSecurityDescriptorDacl(&sd, TRUE, nullptr, FALSE);
 	SECURITY_ATTRIBUTES sa = { sizeof(sa) };
 	sa.lpSecurityDescriptor = &sd;
-	g_hMailSlot = CreateMailslot(L"\\\\.\\mailslot\MyMailBox", 1024, 100, &sa);
+	g_hMailSlot = CreateMailslot(L"\\\\.\\mailslot\\MyMailBox", 1024, 100, &sa);
 	SetServiceStatus(SERVICE_RUNNING);
 
 	while (g_hMailSlot) {
@@ -69,5 +69,8 @@ void WINAPI MyServiceMain(DWORD count, LPSTR* args) {
 		}
 		Sleep(200);
 	}
+
+	std::cin.get();
+	std::cin.get();
 
 }
