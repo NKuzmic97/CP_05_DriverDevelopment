@@ -1,0 +1,18 @@
+1) Run "make" in Terminal in directory of .c file.
+2) Run "sudo insmod nkuzmic_character_device.ko".
+3) Check for device by using "lsmod | grep -i nk".
+4) Make device node by using "sudo mknod /dev/nkuzmic97 c 100 0".
+5) Check is device successfully creating by using "ls -l /dev/nkuzmic97".
+6) Check the contents of device by using "cat /dev/nkuzmic97".
+7) Try sending data to device by using "sudo echo "vanredno stanje!!!" > /dev/nkuzmic97".
+
+In case you get access denied, try next:
+	7a) "sudo chown /*your username*/ /dev/nkuzmic97"
+	example: "sudo chown test /dev/nkuzmic97"
+
+8) Check the contents of device by using "cat /dev/nkuzmic97".
+9) Check the contents of kernel debugger by using "dmesg". In case of a lot of message, try "sudo dmesg -c".
+10) Delete the device node by "sudo rm /dev/nkuzmic97".
+11) Delete the device module by "sudo rmmod nkumic_character_device".
+
+END OF FILE.
