@@ -1,0 +1,10 @@
+1) Run "make" command.
+2) Run "sudo insmod ./debugfs_demo.ko".
+3) Go to next directory: "cd /sys/kernel/debug".
+4) Check the contents of directory by using "ll".
+5) Find your directory and navigate to it: "cd nkuzmic97".
+6) Check the contents of your demo file by: "cat demo_file".
+7) Overwrite the contents of your demo file by: "echo "vanredno stanje" > demo_file" 
+8) Check the contents of your demo file by: "cat demo_file".
+
+END OF FILE
