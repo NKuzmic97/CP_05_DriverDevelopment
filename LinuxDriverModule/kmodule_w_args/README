@@ -1,0 +1,8 @@
+1) Run "make" in directory where hello.c and Makefile are located.
+2) Clear the dmesg buffer by "sudo dmesg -c".
+3) Install the kernel module with : "sudo insmod ./hello.ko arg_var=10,20,30"
+4) Check your arguments with "dmesg". Check are arguments there.
+5) Remove kernel module with: "sudo rmmod hello".
+6) Clear dmesg once again: "sudo dmesg -c".
+
+END OF FILE.
