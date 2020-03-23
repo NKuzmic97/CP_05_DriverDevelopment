@@ -1,0 +1,15 @@
+1) Run "sudo make" to get char_module.ko.
+2) Run "sudo insmod char_module.ko" to install kernel module.
+3) Check is module installed by running "dmesg".
+4) Follow instructions given by kernel module in dmesg.
+	4a) Run "sudo mknod /dev/nkuzmic_device c 249 0" - 249 being given number by dmesg.
+5) Check is device driver created by running "ls /dev/ | grep nkuzmic-device".
+6) Compile our user application by running "gcc -o user_app  user_app.c".
+7) Try running our user application by "./user_app".
+	7a) In case you get error message run "sudo chmod 777 /dev/nkuzmic_device".
+8) Follow messages you get from our user application.
+	8a) To write to device, type "w" enter data and confirm by Enter.
+	8b) After every operation, you can check "dmesg" for logs.
+	8c) To read from device, type "r".
+9) Run "sudo rmmod char_module" to remove kernel module.
+10) Run "sudo rm /dev/nkuzmic_device" to remove device node.
