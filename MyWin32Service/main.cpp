@@ -2,6 +2,8 @@
 #include <Windows.h>
 #include <tchar.h>
 
+// Just a random comment to practice using Git in command line.
+
 void WINAPI MyServiceMain(DWORD count, LPSTR* args);
 
 SERVICE_STATUS_HANDLE g_Handle = nullptr;
