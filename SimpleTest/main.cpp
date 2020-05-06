@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <tchar.h>
 
+int new_feature(double x=1.9){
+return int(1.9 * 2);
+}
+
 int _tmain(int argc, _TCHAR* argv[]) {
 	HANDLE h = CreateFile(
 		L"\\\\.\\mailslot\\MyMailBox",
